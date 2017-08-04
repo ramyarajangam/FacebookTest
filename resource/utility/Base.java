@@ -122,7 +122,7 @@ static File f1 = new File("./JSON/Configuration.json");
 
 	}
 
-	public boolean elementFound(WebElement element) {
+	public static boolean elementFound(WebElement element) {
 		boolean res = false;
 		try {
 			res = element.isDisplayed();
@@ -133,7 +133,7 @@ static File f1 = new File("./JSON/Configuration.json");
 		return res;
 	}
 
-	public void setText(WebElement element, String name) {
+	public static void setText(WebElement element, String name) {
 		if (name != null && elementFound(element)) {
 			//element.clear();
 			element.sendKeys(name);
@@ -150,7 +150,7 @@ static File f1 = new File("./JSON/Configuration.json");
 
 	}
 
-	public void clickBtn(WebElement element) {
+	public static void clickBtn(WebElement element) {
 		if (elementFound(element)) {
 			element.click();
 		}
@@ -159,7 +159,7 @@ static File f1 = new File("./JSON/Configuration.json");
 		Select s=new Select(element) ;
 		s.selectByValue(name);
 	}
-	public void dropDownSelectByVText(WebElement element,String name) {
+	public static void dropDownSelectByVText(WebElement element,String name) {
 		Select s=new Select(element) ;		
 		s.selectByVisibleText(name);
 	}
